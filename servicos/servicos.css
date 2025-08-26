@@ -1,0 +1,45 @@
+.servicos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 4rem;
+}
+.agendar{
+    display: inline-block;
+    background-color: #fff;
+    font-weight: 900;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s ease, 
+}
+
+.agendar:hover {
+    transform: scale(1.05);
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+  border-radius: 0.4rem;
+  background-color: rgb(238, 243, 229);
+}
+
+tbody tr td,
+th {
+  border-bottom: 0.4rem solid white;
+  padding: 1rem;
+  text-align: center;
+}
+
+td > a {
+  text-decoration: none;
+  color: black;
+}
+
+.img-table {
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+}

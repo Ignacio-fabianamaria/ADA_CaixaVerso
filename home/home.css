@@ -1,0 +1,16 @@
+.descricao-home {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  font-size: 1.1rem;
+  width: 60%;
+}
+
+.span-promocao :first-child {
+  padding: 0.8rem;
+}
+.span-promocao :last-child {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+

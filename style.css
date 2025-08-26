@@ -1,94 +1,151 @@
-*{
-    font-family: "Inter", sans-serif;
-}
-body{
-    background: url('assets/background.png');
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: auto;
-}
-.content div {
-    color: #D44D51;
-    font-family: Roboto;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px; 
-}
-    .menu {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .menu li {
-        list-style-type: none;
-        font-size: 20px;
-    }
-
-    ul {
-        color: #CD313E;
-        font-family: Roboto;
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        display: flex; 
-        gap: 30px;
-    }
-
-    a{
-        display: inline-block; 
-        text-decoration: none;
-        color: #091133;
-        border: 1px solid #091133;
-        width: 189.131px; 
-        height: 36px;    
-        line-height: 36px; 
-        text-align: center; 
-        margin-left: 2rem;
-    }
-
-    button {
-        width: 189.131px;
-        height: 36px;
-        flex-shrink: 0;
-        background-color: #CD313E;
-        color: #fff;
-        border: none;
-        box-shadow: 0 4px 2px 1px rgba(12, 12, 12, 0.3);
-    }
-
-.content {
-    padding-top: 240px;
-    padding-bottom: 440px;
-    margin-bottom: 100px;
-   
+/* === Reset e base === */
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.content div {
-    width: 540px;
-    margin-left: 10px;
-    padding: 2rem;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* garante altura mínima */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
 }
 
-h1{
-    color: #091133;
-    font-weight: 400;
-    line-height: 36px ;
+/* === Cabeçalho === */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  background-color: rgb(165, 184, 135);
+  z-index: 1000;
 }
 
+/* === Menu === */
+nav {
+  position: fixed;
+  top: 90px; /* altura do header */
+  left: 0;
+  width: 100%;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  background: white; /* evita que texto fique colado no fundo */
+  z-index: 999;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+nav a:hover {
+  color: rgb(52, 51, 51);
+}
+
+/* === Conteúdo === */
+.conteudo {
+  display: flex;
+  width: 100%;
+  margin-top: calc(90px + 60px); /* espaço do header + nav */
+  margin-bottom: 60px; /* espaço do footer */
+}
+
+/* === Aside === */
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: rgb(165, 184, 135);
+  border-radius: 0 15px 15px 0;
+  width: 20%;
+}
+aside > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* === Conteúdo principal === */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  width: 80%;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  text-align: justify;
+
+}
+
+/* === Rodapé === */
 footer {
-    background-color: #F78282; 
-    padding-top: 68px;
-    display: flex; 
-    justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(165, 184, 135);
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.8rem;
 }
 
-ul li {
-    list-style-type: none;
-    font-size: 16px;
-}
+@media (max-width:700px){
+   .conteudo{
+    display: flex;
+    flex-direction: column
+   }
+   nav{
+    gap: 1rem;
+   }
+   aside{
+    width: 100%;
+    border-radius: 0;
+   }
+   main{
+    order: -1;
+   }
+   .main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    padding: 0;
+   }
+   .descricao-home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    
+   }
 
-.yourcompany {
-    color: white;
-}
+    };
